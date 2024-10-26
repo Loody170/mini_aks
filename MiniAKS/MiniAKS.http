@@ -1,0 +1,6 @@
+@MiniAKS_HostAddress = http://localhost:5012
+
+GET {{MiniAKS_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

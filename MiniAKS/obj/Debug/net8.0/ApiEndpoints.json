@@ -1,0 +1,275 @@
+[
+  {
+    "ContainingType": "MiniAKS.Controllers.CustomizationController",
+    "Method": "GetCustomizations",
+    "RelativePath": "api/Customization",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MiniAKS.Controllers.CustomizationController",
+    "Method": "GetCustomization",
+    "RelativePath": "api/Customization/{customizationId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "customizationId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MiniAKS.Controllers.CustomizationController",
+    "Method": "getCustomizationForAnOrderProduct",
+    "RelativePath": "api/Customization/{orderId}/{productId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "orderId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "productId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MiniAKS.Controllers.ItemController",
+    "Method": "GetItems",
+    "RelativePath": "api/Item",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MiniAKS.Controllers.ItemController",
+    "Method": "GetItem",
+    "RelativePath": "api/Item/{itemId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "itemId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MiniAKS.Controllers.ItemController",
+    "Method": "GetProductsByItemId",
+    "RelativePath": "api/Item/{itemId}/products",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "itemId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MiniAKS.Controllers.OrderController",
+    "Method": "GetOrders",
+    "RelativePath": "api/Order",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MiniAKS.Controllers.OrderController",
+    "Method": "CreateOrder",
+    "RelativePath": "api/Order",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "order",
+        "Type": "MiniAKS_Database.Dtos.OrderDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MiniAKS.Controllers.OrderController",
+    "Method": "GetOrder",
+    "RelativePath": "api/Order/{orderId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "orderId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MiniAKS.Controllers.OrderController",
+    "Method": "GetProductsInAnOrder",
+    "RelativePath": "api/Order/{orderId}/products",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "orderId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MiniAKS.Controllers.ProductController",
+    "Method": "GetProducts",
+    "RelativePath": "api/Product",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MiniAKS.Controllers.ProductController",
+    "Method": "GetProduct",
+    "RelativePath": "api/Product/{productId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MiniAKS.Controllers.ProductController",
+    "Method": "GetProductItems",
+    "RelativePath": "api/Product/{productId}/items",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MiniAKS.Controllers.SalesChannelController",
+    "Method": "GetSalesChannels",
+    "RelativePath": "api/SalesChannel",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MiniAKS.Controllers.SalesChannelController",
+    "Method": "GetSalesChannel",
+    "RelativePath": "api/SalesChannel/{salesChannelId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "salesChannelId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MiniAKS.Controllers.SalesChannelController",
+    "Method": "GetSalesChannelStatus",
+    "RelativePath": "api/SalesChannel/status/{salesChannelId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "salesChannelId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MiniAKS.Controllers.StationController",
+    "Method": "GetStations",
+    "RelativePath": "api/Station",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MiniAKS.Controllers.StationController",
+    "Method": "GetStation",
+    "RelativePath": "api/Station/{stationId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "stationId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MiniAKS.Controllers.StationController",
+    "Method": "GetStationItems",
+    "RelativePath": "api/Station/{stationId}/items",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "stationId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
