@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MiniAKS_Database")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+affcbbcd0417eca1a229a063bbe4238187af201b")]
 [assembly: System.Reflection.AssemblyProductAttribute("MiniAKS_Database")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MiniAKS_Database")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

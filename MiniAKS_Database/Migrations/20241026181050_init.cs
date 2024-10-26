@@ -123,8 +123,7 @@ namespace MiniAKS_Database.Migrations
                         name: "FK_Items_Stations_StationId",
                         column: x => x.StationId,
                         principalTable: "Stations",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -177,6 +176,30 @@ namespace MiniAKS_Database.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "StationQueues",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    StationId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    ItemId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Quantity = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_StationQueues", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_StationQueues_Items_ItemId",
+                        column: x => x.ItemId,
+                        principalTable: "Items",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_StationQueues_Stations_StationId",
+                        column: x => x.StationId,
+                        principalTable: "Stations",
+                        principalColumn: "Id");
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_Items_StationId",
                 table: "Items",
@@ -196,6 +219,16 @@ namespace MiniAKS_Database.Migrations
                 name: "IX_ProductItems_ItemId",
                 table: "ProductItems",
                 column: "ItemId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_StationQueues_ItemId",
+                table: "StationQueues",
+                column: "ItemId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_StationQueues_StationId",
+                table: "StationQueues",
+                column: "StationId");
         }
 
         /// <inheritdoc />
@@ -209,6 +242,9 @@ namespace MiniAKS_Database.Migrations
 
             migrationBuilder.DropTable(
                 name: "SalesChannels");
+
+            migrationBuilder.DropTable(
+                name: "StationQueues");
 
             migrationBuilder.DropTable(
                 name: "Customizations");

@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiniAKS", "MiniAKS\MiniAKS.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiniAKS_Database", "MiniAKS_Database\MiniAKS_Database.csproj", "{270B021A-3C4E-47A1-B0E1-F6E3F7496D45}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniAKS_Services", "MiniAKS_Services\MiniAKS_Services.csproj", "{4501A95C-6CB5-41DE-8E5E-E5292664EB61}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiniAKS_Services", "MiniAKS_Services\MiniAKS_Services.csproj", "{4501A95C-6CB5-41DE-8E5E-E5292664EB61}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

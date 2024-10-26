@@ -1,0 +1,24 @@
+{
+  "orderNumber": "01",
+  "salesChannel": "Dine in",
+  "placedOn": "2024-10-24T21:04:33.3399481Z",
+  "printedOn": "2024-10-24T21:04:33.3399481Z",
+  "completedOn": null,
+  "orderProducts": [
+    {
+      "productId": "8579B049-A104-4A81-BC24-E6306BCC4D30",
+      "quantity": 2,
+      "customizations": [
+        "101",
+        "102"
+      ]
+    },
+    {
+      "productId": "54875419-7700-434F-A43E-6A671F6A79B0",
+      "quantity": 1,
+      "customizations": [
+        "101"
+      ]
+    }
+  ]
+}

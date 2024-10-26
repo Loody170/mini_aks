@@ -18,6 +18,9 @@ namespace MiniAKS_Database.Database
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderProduct> OrderProducts { get; set; }
 
+        public DbSet<StationQueue> StationQueues { get; set; }
+
+
         // Add DbSet for OrderProductCustomization
         public DbSet<OrderProductCustomization> OrderProductCustomizations { get; set; }
 
@@ -69,7 +72,20 @@ namespace MiniAKS_Database.Database
             modelBuilder.Entity<Station>()
                 .HasMany(s => s.Items)
                 .WithOne(i => i.Station)
-                .HasForeignKey(i => i.StationId);
+                .HasForeignKey(i => i.StationId)
+                .OnDelete(DeleteBehavior.NoAction); 
+
+            modelBuilder.Entity<StationQueue>()
+            .HasOne(scq => scq.Station)
+            .WithMany(s => s.StationQueues)
+            .HasForeignKey(scq => scq.StationId)
+            .OnDelete(DeleteBehavior.NoAction); 
+
+            modelBuilder.Entity<StationQueue>()
+            .HasOne(scq => scq.Item)
+            .WithMany(i => i.StationQueues)
+            .HasForeignKey(scq => scq.ItemId)
+            .OnDelete(DeleteBehavior.NoAction);
         }
     }
 }

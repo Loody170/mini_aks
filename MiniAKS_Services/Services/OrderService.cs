@@ -17,12 +17,18 @@ namespace MiniAKS_Services.Services
         private readonly IMapper _mapper;
         private readonly ISalesChannelService _salesChannelService;
         private readonly ICustomizationService _customizationService;
+        private readonly IStationQueueService _stationQueueService;
+        private readonly IProductService _productService;
         public OrderService(IOrderRepository orderRepository, ISalesChannelService salesChannelService,
-            ICustomizationService customizationService, IMapper mapper)
+            ICustomizationService customizationService,
+            IStationQueueService stationQueueService,
+            IProductService productService ,IMapper mapper)
         {
             _orderRepository = orderRepository;
             _salesChannelService = salesChannelService;
             _customizationService = customizationService;
+            _stationQueueService = stationQueueService;
+            _productService = productService;
             _mapper = mapper;
         }
 
@@ -35,6 +41,16 @@ namespace MiniAKS_Services.Services
             }
             Order order = MapDtoToModel(orderDto);
             _orderRepository.CreateOrder(order);
+            foreach(var orderProductDto in orderDto.OrderProducts)
+            {
+                var productItems = _productService.GetProductItems(orderProductDto.ProductId);
+                foreach (var productItem in productItems)
+                {
+                    var totalItemQuantity = orderProductDto.Quantity * productItem.Quantity;
+                    _stationQueueService.AddOrUpdateStationQueue(productItem.Item.StationId, productItem.ItemId, totalItemQuantity);
+                }
+
+            }
             return true;
         }
 

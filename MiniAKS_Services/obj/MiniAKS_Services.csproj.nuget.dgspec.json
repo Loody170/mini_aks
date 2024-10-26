@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\loody\\Desktop\\MiniAKS-main\\MiniAKS_Services\\MiniAKS_Services.csproj": {}
+    "C:\\Users\\loody\\Documents\\GitHub\\mini_aks\\MiniAKS_Services\\MiniAKS_Services.csproj": {}
   },
   "projects": {
-    "C:\\Users\\loody\\Desktop\\MiniAKS-main\\MiniAKS_Database\\MiniAKS_Database.csproj": {
+    "C:\\Users\\loody\\Documents\\GitHub\\mini_aks\\MiniAKS_Database\\MiniAKS_Database.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\loody\\Desktop\\MiniAKS-main\\MiniAKS_Database\\MiniAKS_Database.csproj",
+        "projectUniqueName": "C:\\Users\\loody\\Documents\\GitHub\\mini_aks\\MiniAKS_Database\\MiniAKS_Database.csproj",
         "projectName": "MiniAKS_Database",
-        "projectPath": "C:\\Users\\loody\\Desktop\\MiniAKS-main\\MiniAKS_Database\\MiniAKS_Database.csproj",
+        "projectPath": "C:\\Users\\loody\\Documents\\GitHub\\mini_aks\\MiniAKS_Database\\MiniAKS_Database.csproj",
         "packagesPath": "C:\\Users\\loody\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\loody\\Desktop\\MiniAKS-main\\MiniAKS_Database\\obj\\",
+        "outputPath": "C:\\Users\\loody\\Documents\\GitHub\\mini_aks\\MiniAKS_Database\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\loody\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -91,14 +91,14 @@
         }
       }
     },
-    "C:\\Users\\loody\\Desktop\\MiniAKS-main\\MiniAKS_Services\\MiniAKS_Services.csproj": {
+    "C:\\Users\\loody\\Documents\\GitHub\\mini_aks\\MiniAKS_Services\\MiniAKS_Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\loody\\Desktop\\MiniAKS-main\\MiniAKS_Services\\MiniAKS_Services.csproj",
+        "projectUniqueName": "C:\\Users\\loody\\Documents\\GitHub\\mini_aks\\MiniAKS_Services\\MiniAKS_Services.csproj",
         "projectName": "MiniAKS_Services",
-        "projectPath": "C:\\Users\\loody\\Desktop\\MiniAKS-main\\MiniAKS_Services\\MiniAKS_Services.csproj",
+        "projectPath": "C:\\Users\\loody\\Documents\\GitHub\\mini_aks\\MiniAKS_Services\\MiniAKS_Services.csproj",
         "packagesPath": "C:\\Users\\loody\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\loody\\Desktop\\MiniAKS-main\\MiniAKS_Services\\obj\\",
+        "outputPath": "C:\\Users\\loody\\Documents\\GitHub\\mini_aks\\MiniAKS_Services\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\loody\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -116,8 +116,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\loody\\Desktop\\MiniAKS-main\\MiniAKS_Database\\MiniAKS_Database.csproj": {
-                "projectPath": "C:\\Users\\loody\\Desktop\\MiniAKS-main\\MiniAKS_Database\\MiniAKS_Database.csproj"
+              "C:\\Users\\loody\\Documents\\GitHub\\mini_aks\\MiniAKS_Database\\MiniAKS_Database.csproj": {
+                "projectPath": "C:\\Users\\loody\\Documents\\GitHub\\mini_aks\\MiniAKS_Database\\MiniAKS_Database.csproj"
               }
             }
           }

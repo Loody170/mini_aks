@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "m6lJUC4LN2o=",
+  "dgSpecHash": "+ciT/S4yyEk=",
   "success": true,
-  "projectFilePath": "C:\\Users\\loody\\Desktop\\MiniAKS-main\\MiniAKS_Database\\MiniAKS_Database.csproj",
+  "projectFilePath": "C:\\Users\\loody\\Documents\\GitHub\\mini_aks\\MiniAKS_Database\\MiniAKS_Database.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\loody\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\loody\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",

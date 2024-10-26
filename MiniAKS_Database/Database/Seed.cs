@@ -231,6 +231,25 @@ public class Seed
 
             context.Set<OrderProductCustomization>().AddRange(orderProductCustomization1, orderProductCustomization2);
             context.SaveChanges();
+
+            var stationQueue1 = new StationQueue
+            {
+                Id = Guid.NewGuid(),
+                StationId = station1.Id,
+                ItemId = item1.Id,
+                Quantity = 12,
+            };
+
+            var stationQueue2 = new StationQueue
+            {
+                Id = Guid.NewGuid(),
+                StationId = station2.Id,
+                ItemId = item2.Id,
+                Quantity = 7,
+            };
+
+            context.Set<StationQueue>().AddRange(stationQueue1, stationQueue2);
+            context.SaveChanges();
         }
     }
 }

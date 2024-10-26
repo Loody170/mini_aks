@@ -21,6 +21,7 @@ builder.Services.AddScoped<IItemRepository, ItemRepository>();
 builder.Services.AddScoped<IStationRepository, StationRepository>();
 builder.Services.AddScoped<ISalesChannelRepository, SalesChannelRepository>();
 builder.Services.AddScoped<ICustomizationRepository, CustomizationRepository>();
+builder.Services.AddScoped<IStationQueueRepository, StationQueueRepository>();
 
 //insert services
 builder.Services.AddScoped<IProductService, ProductService>();
@@ -29,6 +30,7 @@ builder.Services.AddScoped<IItemService, ItemService>();
 builder.Services.AddScoped<ISalesChannelService, SalesChannelService>();
 builder.Services.AddScoped<IOrderService, OrderService>();
 builder.Services.AddScoped<ICustomizationService, CustomizationService>();
+builder.Services.AddScoped<IStationQueueService, StationQueueService>();
 
 
 

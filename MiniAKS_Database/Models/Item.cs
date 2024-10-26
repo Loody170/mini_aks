@@ -11,6 +11,8 @@
         public ICollection<ProductItem> ProductItems { get; set; }
         public Guid StationId { get; set; }
         public Station Station { get; set; }
+        public ICollection<StationQueue> StationQueues { get; set; }
+
 
     }
 }

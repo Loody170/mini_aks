@@ -12,7 +12,7 @@ using MiniAKS_Database.Database;
 namespace MiniAKS_Database.Migrations
 {
     [DbContext(typeof(MiniAKSDbContext))]
-    [Migration("20241026162740_init")]
+    [Migration("20241026181050_init")]
     partial class init
     {
         /// <inheritdoc />
@@ -214,12 +214,36 @@ namespace MiniAKS_Database.Migrations
                     b.ToTable("Stations");
                 });
 
+            modelBuilder.Entity("MiniAKS_Database.Models.StationQueue", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("ItemId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.Property<Guid>("StationId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ItemId");
+
+                    b.HasIndex("StationId");
+
+                    b.ToTable("StationQueues");
+                });
+
             modelBuilder.Entity("MiniAKS_Database.Models.Item", b =>
                 {
                     b.HasOne("MiniAKS_Database.Models.Station", "Station")
                         .WithMany("Items")
                         .HasForeignKey("StationId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Station");
@@ -282,9 +306,30 @@ namespace MiniAKS_Database.Migrations
                     b.Navigation("Product");
                 });
 
+            modelBuilder.Entity("MiniAKS_Database.Models.StationQueue", b =>
+                {
+                    b.HasOne("MiniAKS_Database.Models.Item", "Item")
+                        .WithMany("StationQueues")
+                        .HasForeignKey("ItemId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("MiniAKS_Database.Models.Station", "Station")
+                        .WithMany("StationQueues")
+                        .HasForeignKey("StationId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("Item");
+
+                    b.Navigation("Station");
+                });
+
             modelBuilder.Entity("MiniAKS_Database.Models.Item", b =>
                 {
                     b.Navigation("ProductItems");
+
+                    b.Navigation("StationQueues");
                 });
 
             modelBuilder.Entity("MiniAKS_Database.Models.Order", b =>
@@ -307,6 +352,8 @@ namespace MiniAKS_Database.Migrations
             modelBuilder.Entity("MiniAKS_Database.Models.Station", b =>
                 {
                     b.Navigation("Items");
+
+                    b.Navigation("StationQueues");
                 });
 #pragma warning restore 612, 618
         }
